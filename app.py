@@ -73,6 +73,22 @@ def main():
                         st.plotly_chart(fig, use_container_width=True)
                 
                 st.subheader("Ask Your Data")
+                
+                with st.expander("💡 See example questions you can ask"):
+                    st.markdown("""
+                    **Examples:**
+                    • What are the top 5 products by revenue?
+                    • Which region contributes the most revenue?
+                    • How did revenue change over time?
+                    • Compare North and South.
+                    • Calculate profit margin.
+                    • Find unusual revenue values.
+                    • Normalize revenue within each region.
+                    • Which customer segment performs best?
+                    • Analyze the relationship between quantity and revenue.
+                    • Give me a complete analytical report.
+                    """)
+                    
                 question = st.text_input("Ask a question about this dataset:")
                 if st.button("Ask Gemma"):
                     with st.spinner("Gemma is reasoning..."):
